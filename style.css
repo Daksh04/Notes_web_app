@@ -1,0 +1,24 @@
+body
+{
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  background: url("img.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+h1
+{
+  color: #FFF;
+  text-align: center;
+}
+
+.card-body
+{
+ border-top: 3px solid #000066;
+ border-bottom: 3px solid #000066;
+ border-radius: 30px;
+}
+
