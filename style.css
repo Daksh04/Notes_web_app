@@ -4,9 +4,8 @@ body
   font-size: 30px;
   margin: 0;
   padding: 0;
-  background: url("img.jpg");
+  background: url("BricksImg.jpg");
   background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 h1
