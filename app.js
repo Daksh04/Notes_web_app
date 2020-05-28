@@ -62,10 +62,10 @@ search.addEventListener("input", function(){
   Array.from(noteCards).forEach(function(element){
    let cardTxt = element.getElementsByTagName("p")[0].innerText;
    if(cardTxt.includes(inputVal)){
-     element.getElementsByClassName.display = "block";
+     element.style.display = "block";
    }
    else{
-     element.getElementsByClassName.display = "none";
+     element.style.display = "none";
    }
    console.log(cardTxt);
 
