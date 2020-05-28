@@ -12,6 +12,8 @@ h1
 {
   color: #FFF;
   text-align: center;
+  border-bottom: 2px solid #FFF;
+  margin: 0px 100px;
 }
 
 .card-body
