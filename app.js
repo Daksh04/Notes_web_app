@@ -39,6 +39,7 @@ function showNotes() {
     <h4 class="card-title">NOTE ${index + 1}</h4>
     <p class="card-text"> ${element}</p>
     <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+    <button id="${index}" onclick="editNote(this.id)" class="btn btn-primary">Edit Note</button>
   </div>
   </div> `;
   });
@@ -104,6 +105,7 @@ function showNotes() {
     <h4 class="card-title">NOTE ${index + 1}</h4>
     <p class="card-text"> ${element}</p>
     <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+    <button id="${index}" onclick="editNote(this.id)" class="btn btn-primary">Edit Note</button>
   </div>
   </div> `;
   });
@@ -116,3 +118,30 @@ function showNotes() {
  }
 }
 
+//function for edit notes
+function editNote(index) {
+console.log("Edit The Note", index);
+let editTxt = document.getElementById('editTxt');
+let notes = localStorage.getItem("notes");
+  if(notes == null){
+    notesObj = [];
+  }
+  else{
+    notesObj = JSON.parse(notes);
+  }
+  let html = "";
+  notesObj.forEach(function(element, index) {
+    html += `
+    <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
+    <div class="card-body">
+    <h4 class="card-title">NOTE ${index + 1}</h4>
+    <div class="form-group">
+         <textarea class="form-control" id="editTxt" rows="3">
+         ${element}
+         </textarea>
+    </div>
+         <button id="saveTxt" onclick="saveNote(this.id)" class="btn btn-primary">Save</button>
+    </div>
+    </div> `;
+  });
+}
