@@ -56,7 +56,7 @@ function showNotes() {
 let search = document.getElementById('searchTxt');
 search.addEventListener("input", function(){
   
-  let inputVal = search.value;
+  let inputVal = search.value.toLowerCase;
   console.log('Input Event Fired!', inputVal);
   let noteCards = document.getElementsByClassName('noteCard');
   Array.from(noteCards).forEach(function(element){
